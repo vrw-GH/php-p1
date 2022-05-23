@@ -1,0 +1,6 @@
+
+    Automaticall pick any php page inside "inc" folder and display as menu item, and show in contents area.
+    *     This description is in a txt file. 
+    *   text in (this) file will be sanitized and is displayed between <pre> tags. 
+
+   <h1>test</h1>

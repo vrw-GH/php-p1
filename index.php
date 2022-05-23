@@ -13,6 +13,27 @@
       <h1>My first PHP project</h1>
    </div>
 
+   <div>
+      <h3 style="color: blue">Details of project:</h3>
+      <?php
+         $descfile='./details.txt';
+         if (file_exists($descfile)) {
+            echo '<pre>';
+            // include($descfile);
+            $contents = file_get_contents($descfile);
+            // $contents_sanitized = filter_var($contents);
+            // $contents_tagless = strip_tags($contents);
+            $contents_tagless = str_replace('<',"'",$contents);
+            $contents_tagless = str_replace('>',"'",$contents_tagless);
+            echo $contents_tagless;
+            echo '</pre>';
+         } else {
+         echo "<pre>  (No project description found) </pre>";
+      }
+      ?>
+      <br><br>
+   </div>
+
    <div id="menu">
       <?php
       $inc_dir = "inc";
@@ -21,7 +42,7 @@
       foreach ($pages as $pagekey => $page) {
          $menuitem = substr_replace($page,'',-4);
          echo '<a href="index.php?page='.strtolower($menuitem).'">'.strtoupper(substr($menuitem,0,1)).substr($menuitem,1).'</a>';
-         $seperator = ($pagekey==array_key_last($pages)) ? '':'&spades;';         
+         $seperator = ($pagekey==array_key_last($pages)) ? ' ':' &spades; ';
          echo "&nbsp;$seperator&nbsp;";          
       };
       ?>
@@ -46,7 +67,7 @@
    <div id="footer">
 
       <hr>
-      <a href="..\">Back to Projects List</a>
+      <a href="..\">Go Back (Projects List)</a>
    </div>
 
 </body>
