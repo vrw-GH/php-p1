@@ -1,3 +1,3 @@
-<div style="background-color: lightblue; margin:20px;">
+<div>
    Nothing here (yet)
 </div>

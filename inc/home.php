@@ -1,9 +1,10 @@
-<div style="background-color: lightgreen; margin:20px;">
+<div>
    <?php
-      $date = date('H:i');
-      echo '<meta http-equiv="refresh" content="60">';
-      echo "<br>This is the Home Page";
-      echo "<br>The time is : $date";
-      echo "<br><br>";
+      echo '<meta http-equiv="refresh" content="30">';
+      $time = date('g:i A (e)');
+      // $time = exec('time /T');
+      echo "This is the Home Page<br>";
+      echo "The time is : $time";
    ?>
+
 </div>

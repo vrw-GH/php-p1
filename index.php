@@ -21,20 +21,21 @@
             echo '<pre>';
             // include($descfile);
             $contents = file_get_contents($descfile);
-            // $contents_sanitized = filter_var($contents);
-            // $contents_tagless = strip_tags($contents);
-            $contents_tagless = str_replace('<',"'",$contents);
-            $contents_tagless = str_replace('>',"'",$contents_tagless);
+            // $contents_tagless = str_replace('<',"'",$contents);
+            // $contents_tagless = str_replace('>',"'",$contents_tagless);
+            $contents_tagless = htmlentities($contents);
             echo $contents_tagless;
             echo '</pre>';
          } else {
          echo "<pre>  (No project description found) </pre>";
       }
+      print_r($_GET);
       ?>
-      <br><br>
+      <br>
    </div>
 
-   <div id="menu">
+
+   <div id="menu" style="background-color:lightgrey;">
       <?php
       $inc_dir = "inc";
       $pages = scandir($inc_dir,0);
@@ -48,24 +49,26 @@
       ?>
    </div>
    <hr>
-
-   <div id="contents">
-      <?php
-      if (!empty($_GET["page"])){
-         $page = $_GET["page"];
-         if (in_array($page.'.php',$pages)) {
-            include($inc_dir.'/'.$page.'.php');
+   <?php 
+      // $randomcolor=dechex(rand(0, 10000000));
+      $randomcolor = sprintf('#%06X', mt_rand(intval(0xFFFFFF / 1.005), 0xFFFFFF));
+   ?>
+   <div id="contents" style="background-color: <?=$randomcolor; ?>; margin:20px;">
+      <?php      
+         if (!empty($_GET["page"])){
+            $page = $_GET["page"];
+            if (in_array($page.'.php',$pages)) {
+               include($inc_dir.'/'.$page.'.php');
+            } else {
+               echo '<h3>Page does\'nt exist.</h3>';
+            };
          } else {
-            echo '<h3>Page does\'nt exist.</h3>';
-         };
-      } else {
-         include($inc_dir.'/home.php');
-      };
-      echo '<br>';
+            include($inc_dir.'/home.php');
+         };      
       ?>
    </div>
-   <div id="footer">
 
+   <div id="footer">
       <hr>
       <a href="..\">Go Back (Projects List)</a>
    </div>
