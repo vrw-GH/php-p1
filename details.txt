@@ -1,9 +1,13 @@
 * This description is in a normal ".txt" file.
-* html tags inside (this) file will be sanitized
+* html tags inside (this) text file will be sanitized
    <h1>test</h1>
-* it is displayed between <pre> tags, so space/line formatting will be maintained.
+
+	* it is displayed between <pre> tags, so space/line formatting will be maintained.
                 hello!
+
+
 * Automaticall picks any php page inside "inc" folder and displays as a menu item, and will show in contents area.
-* randomly generates lighter background color for contents
+* randomly generates lighter background color for the Contents <div>
+* inc_folder page displays the dir of pages in "inc" and on click, will display contents of page.
 
 

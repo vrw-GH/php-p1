@@ -5,6 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="../../resources/favicon-apache.png">
    <title>Projects: P1</title>
 </head>
 
@@ -20,16 +21,16 @@
          if (file_exists($descfile)) {
             echo '<pre>';
             // include($descfile);
-            $contents = file_get_contents($descfile);
             // $contents_tagless = str_replace('<',"'",$contents);
             // $contents_tagless = str_replace('>',"'",$contents_tagless);
+            $contents = file_get_contents($descfile);
             $contents_tagless = htmlentities($contents);
             echo $contents_tagless;
             echo '</pre>';
          } else {
          echo "<pre>  (No project description found) </pre>";
       }
-      print_r($_GET);
+      // print_r($_GET);
       ?>
       <br>
    </div>
@@ -54,7 +55,7 @@
       $randomcolor = sprintf('#%06X', mt_rand(intval(0xFFFFFF / 1.005), 0xFFFFFF));
    ?>
    <div id="contents" style="background-color: <?=$randomcolor; ?>; margin:20px;">
-      <?php      
+      <?php
          if (!empty($_GET["page"])){
             $page = $_GET["page"];
             if (in_array($page.'.php',$pages)) {
@@ -64,7 +65,7 @@
             };
          } else {
             include($inc_dir.'/home.php');
-         };      
+         };
       ?>
    </div>
 
