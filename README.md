@@ -1,6 +1,6 @@
 # my first php project (php-p1)
 
-<pre>
+<code>
 Apache Server  = localhost
 Project Folder = document_root/projects/p1
 
@@ -18,4 +18,4 @@ Project Folder = document_root/projects/p1
 * Inc_folder page displays the directory of "inc", and on click will display sanitized contents of page as text.
 
 
-</pre>
+</code>
