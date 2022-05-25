@@ -15,6 +15,7 @@ Project Folder = document_root/projects/p1
 
 
 * Page will automaticall pick any php page inside "inc" folder, and display it as an "item" in the menu.
+* Any php file prepended with "_" becomes first item in menu.
 * Menu onclick will show relevant page in the "contents" div.
 * Contents div background color (only lighter colors) is randomly generated on refresh.
 * "Home" page refreshes every few seconds for the time display.
