@@ -1,10 +1,10 @@
 # my first php project (php-p1)
 
-<code>
+<samp>
 Apache Server  = localhost
 Project Folder = document_root/projects/p1
 
-* This description directly reads the git "README.md" file.
+* The git "README.md" file is directly read into in the project page "description" div.
 * HTML tags inside (this) file are sanitized.
    <h1>test</h1>
 * It is displayed between <pre> tags on the site page, so space/line formatting will be maintained.
@@ -18,4 +18,4 @@ Project Folder = document_root/projects/p1
 * Inc_folder page displays the directory of "inc", and on click will display sanitized contents of page as text.
 
 
-</code>
+</samp>
