@@ -6,7 +6,7 @@ Project Folder = document_root/projects/p1
 
 * The git "README.md" file is directly read into in the project page "description" div.
 * HTML tags inside (this) file are sanitized.
-   <h1>test</h1>
+   <pre><h1>test</h1></pre>
 * It is displayed between <pre> tags on the site page, so space/line formatting will be maintained.
                     Hello    Coders!
 
