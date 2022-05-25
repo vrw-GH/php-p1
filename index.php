@@ -17,7 +17,8 @@
    <div>
       <h3 style="color: blue">Details of project:</h3>
       <?php
-         $descfile='./details.txt';
+//         $descfile='./details.txt';
+         $descfile='./README.md';
          if (file_exists($descfile)) {
             echo '<pre>';
             // include($descfile);

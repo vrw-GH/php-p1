@@ -1,8 +1,7 @@
 * This description is in a normal ".txt" file.
 * html tags inside (this) text file will be sanitized
    <h1>test</h1>
-
-	* it is displayed between <pre> tags, so space/line formatting will be maintained.
+* it is displayed between <pre> tags, so space/line formatting will be maintained.
                 hello!
 
 
