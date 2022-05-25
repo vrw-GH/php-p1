@@ -20,4 +20,4 @@ Apache Server  = localhost
 * "Home" page refreshes every few seconds for the time display.
 * "Inc_folder" page displays the directory of "inc", and onclick will display sanitized contents of page as text.
 
-
+view on GitHub https://vrw-gh.github.io/php-p1/
