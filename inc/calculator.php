@@ -3,14 +3,18 @@ require_once "./classes/Calc.php";
 
 $calc = new Calc();
 
-$calc->add(10);
-echo $calc->getTotal();
-echo '<br>';
+echo '<p style="padding:26px;">';
 
-$calc->add(5);
-echo $calc->getTotal();
-echo '<br>';
+   $val = rand(1,40);
+   $calc->add($val);
+   echo $calc->getTotal();
 
-$calc->sub(3);
-echo $calc->getTotal();
-echo '<br>';
+   $val = rand(1,40);
+   $calc->sub($val);
+   echo ' - '.$val.' = '.$calc->getTotal();
+
+   $val = rand(1,40);
+   $calc->add($val);
+   echo ' + '.$val.' = '.$calc->getTotal();   
+
+echo '</p>';

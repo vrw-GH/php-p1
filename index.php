@@ -21,17 +21,13 @@
          $descfile='./README.md';
          if (file_exists($descfile)) {
             echo '<pre>';
-            // include($descfile);
-            // $contents_tagless = str_replace('<',"'",$contents);
-            // $contents_tagless = str_replace('>',"'",$contents_tagless);
             $contents = file_get_contents($descfile);
-            $contents_tagless = htmlentities($contents);
-            echo $contents_tagless;
+            $contents_clean = htmlentities($contents);
+            echo $contents_clean;
             echo '</pre>';
          } else {
-         echo "<pre>  (No project description found) </pre>";
-      }
-      // print_r($_GET);
+            echo "<pre>  (No project description found) </pre>";
+         }
       ?>
       <br>
    </div>
@@ -39,23 +35,44 @@
 
    <div id="menu" style="background-color:lightgrey;">
       <?php
-      $inc_dir = "inc";
-      $pages = scandir($inc_dir,0);
-      unset($pages[0],$pages[1]);
-      foreach ($pages as $pagekey => $page) {
-         $menuitem = substr_replace($page,'',-4);
-         echo '<a href="index.php?page='.strtolower($menuitem).'">'.strtoupper(substr($menuitem,0,1)).substr($menuitem,1).'</a>';
-         $seperator = ($pagekey==array_key_last($pages)) ? ' ':' &spades; ';
-         echo "&nbsp;$seperator&nbsp;";          
-      };
+         $inc_dir = "inc";
+         $pages = scandir($inc_dir,0);
+         unset($pages[0],$pages[1]); // remove . and ..
+         
+         // get only php files (for menu) - removes sub folders
+         $pages = array_filter($pages, static function ($element) {
+            return str_ends_with($element,'.php');
+         });
+         
+         // find _* as first menu item (if one is set)
+         $home = array_filter($pages, static function ($element) {
+            return str_starts_with($element,'_');
+         });
+         $home = implode($home);
+         if (isset($home)) {
+            $key = array_search($home, $pages);
+            unset($pages[$key]); // remove the original entry
+            array_unshift($pages,$home); // add same to beginning of array
+         };
+         // print_r($pages);
+         
+         // create the menu
+         foreach ($pages as $pagekey => $page) {
+            $menulink = substr_replace($page,'',-4); // gets the menu list
+            $menuitem = (str_starts_with($menulink,"_")) ? substr($menulink,1) : $menulink; // remove the "_"
+            $menuitem = strtoupper(substr($menuitem,0,1)).substr($menuitem,1); // capitalize fisrt char
+            echo '<a href="index.php?page='.strtolower($menulink).'">'.$menuitem.'</a>';
+            $seperator = ($pagekey==array_key_last($pages)) ? ' ':' &spades; '; // add seperator if not last element
+            echo "&nbsp;$seperator&nbsp;";          
+         };
       ?>
    </div>
    <hr>
    <?php 
-      // $randomcolor=dechex(rand(0, 10000000));
+      // $randomcolor=dechex(rand(0, 10000000)); // also produces dark colors :(
       $randomcolor = sprintf('#%06X', mt_rand(intval(0xFFFFFF / 1.005), 0xFFFFFF));
    ?>
-   <div id="contents" style="background-color: <?=$randomcolor; ?>; margin:20px;">
+   <div id="contents" style="background-color: <?=$randomcolor; ?>; ">
       <?php
          if (!empty($_GET["page"])){
             $page = $_GET["page"];
@@ -65,7 +82,7 @@
                echo '<h3>Page does\'nt exist.</h3>';
             };
          } else {
-            include($inc_dir.'/home.php');
+            include($inc_dir.'/_home.php');
          };
       ?>
    </div>
