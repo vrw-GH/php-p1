@@ -21,8 +21,12 @@ if (!empty($_GET["file"])){
    echo "<u>File contents of - <strong>$file</strong><br></u>";
    if (in_array($file,$filelist)) {
       if ($file != '.' && $file != '..') {
-         $contents = file_get_contents('./inc/'.$file);
-         echo '<pre>'.htmlentities($contents).'</pre>';
+         if (is_dir('./inc/'.$file)) {
+            echo "<br>It is a subdirectory.<br>" ;
+         } else {
+            $contents = file_get_contents('./inc/'.$file);
+            echo '<pre>'.htmlentities($contents).'</pre>';
+         }
       } else {echo '<h4>Cannot display.</h4>';};      
    } else {
       echo '<h4>no such file.</h4>';
