@@ -1,4 +1,4 @@
-# my first php project (php-p1)
+# my first php project (p1-basic stuff)
 
 
 Apache Server  = localhost
