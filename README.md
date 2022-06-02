@@ -18,5 +18,5 @@ Apache Server = localhost
 - "Home" page refreshes every few seconds for the time display.
 - "Inc_folder" page displays the directory of "inc", and onclick will display sanitized contents of page as text.
 
-Deployed to: https://p1-basic-stuff.herokuapp.com/
-GitHub: https://vrw-gh.github.io/php-p1/
+Deployed to: <a href="https://p1-basic-stuff.herokuapp.com/">p1-basic-stuff.herokuapp.com</a>
+GitHub: <a href="https://vrw-gh.github.io/php-p1/">vrw-gh.github.io/php-p1</a>
