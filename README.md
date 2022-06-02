@@ -19,4 +19,5 @@ Apache Server = localhost
 - "Inc_folder" page displays the directory of "inc", and onclick will display sanitized contents of page as text.
 
 Deployed to: <a href="https://p1-basic-stuff.herokuapp.com/">p1-basic-stuff.herokuapp.com</a>
-GitHub: <a href="https://vrw-gh.github.io/php-p1/">vrw-gh.github.io/php-p1</a>
+<br/>
+GitHub: <a href="https://github.com/vrw-GH/php-p1">vrw-gh.github.io/php-p1</a>
