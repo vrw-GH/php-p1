@@ -2,8 +2,9 @@
 
 Apache Server = localhost
 <br>Project Folder = document_root/projects/p1
+<br>Deployed to: <a href="https://p1-basic-stuff.herokuapp.com/">p1-basic-stuff.herokuapp.com</a>
 
-- The git "README.md" file is directly read into in the site page's "description" <div..>
+- The git "README.md" file (this) is directly read into in the site page's "description" <div..>
 - HTML tags are sanitized before display in site page:
    <h1>test</h1>
 
@@ -18,6 +19,4 @@ Apache Server = localhost
 - "Home" page refreshes every few seconds for the time display.
 - "Inc_folder" page displays the directory of "inc", and onclick will display sanitized contents of page as text.
 
-Deployed to: <a href="https://p1-basic-stuff.herokuapp.com/">p1-basic-stuff.herokuapp.com</a>
-<br/>
 GitHub: <a href="https://github.com/vrw-GH/php-p1">vrw-gh.github.io/php-p1</a>
