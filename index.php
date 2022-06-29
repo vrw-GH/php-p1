@@ -5,35 +5,46 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./style.php" media="screen">
    <link rel="icon" href="../../resources/favicon-apache.png">
    <title>Projects: P1</title>
 </head>
 
-<body background="blue">
-   <div id="header">
+<?php 
+   // $randomcolor=dechex(rand(0, 10000000)); // also produces dark colors :(
+   $randomcolor = sprintf('#%06X', mt_rand(intval(0xFFFFFF / 1.005), 0xFFFFFF));
+?>
+
+<body>
+
+   <!-- ----------------- TITLE ------------------- -->
+   <div id="title" class="div_title" style="background-color: <?=$randomcolor; ?>; ">
       <h1>My first PHP project</h1>
    </div>
 
+   <!-- ----------------- DESCRIPTION ------------------- -->
    <div>
-      <h3 style="color: blue">Details of project:</h3>
+      <div class="div_details">
+         Details of this project: <i>hover to expand...</i>
+      </div>
       <?php
-//         $descfile='./details.txt';
-         $descfile='./README.md';
-         if (file_exists($descfile)) {
-            echo '<pre>';
-            $contents = file_get_contents($descfile);
-            $contents_clean = htmlentities($contents);
-            echo $contents_clean;
-            echo '</pre>';
-         } else {
-            echo "<pre>  (No project description found) </pre>";
-         }
-      ?>
-      <br>
+            $descfile='./README.md';  //         $descfile='./details.txt';
+            if (file_exists($descfile)) {
+               $file_contents = file_get_contents($descfile);
+               $contents_clean = htmlentities($file_contents, ENT_QUOTES | ENT_IGNORE, "UTF-8");
+            } else {
+               $contents_clean = " (No project README found) ";
+            }
+         ?>
+      <div class="div_descr">
+         <pre>
+         <?php echo $contents_clean ?>
+         </pre>
+      </div>
    </div>
 
-
-   <div id="menu" style="background-color:lightgrey;">
+   <!-- ----------------- MENU ------------------- -->
+   <div id="menu" class="div_menu">
       <?php
          $inc_dir = "inc";
          $pages = scandir($inc_dir,0);
@@ -67,12 +78,11 @@
          };
       ?>
    </div>
+
    <hr>
-   <?php 
-      // $randomcolor=dechex(rand(0, 10000000)); // also produces dark colors :(
-      $randomcolor = sprintf('#%06X', mt_rand(intval(0xFFFFFF / 1.005), 0xFFFFFF));
-   ?>
-   <div id="contents" style="background-color: <?=$randomcolor; ?>; ">
+
+   <!-- ----------------- CONTENTS ------------------- -->
+   <div id="contents" class="div_contents">
       <?php
          if (!empty($_GET["page"])){
             $page = $_GET["page"];
@@ -87,8 +97,10 @@
       ?>
    </div>
 
-   <div id="footer">
-      <hr>
+   <hr>
+
+   <!-- ----------------- FOOTER ------------------- -->
+   <div id="footer" class="div_footer">
       <a href="..\">Go Back (Projects List)</a>
    </div>
 

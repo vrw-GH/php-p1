@@ -5,7 +5,7 @@ $filelist = scandir('./inc');
 // $query = $_SERVER ['QUERY_STRING'];
 $page = $_GET['page'];
 
-echo '<p style="padding:26px;">';
+echo '<p>';
    foreach ($filelist as $filekey => $file) {
       $href = 'index.php?page='.$page.'&file='.$file;
       echo '<a href='.$href.'>'.$file.'</a><br>';

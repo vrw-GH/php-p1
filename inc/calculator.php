@@ -3,7 +3,7 @@ require_once "./classes/Calc.php";
 
 $calc = new Calc();
 
-echo '<p style="padding:26px;">';
+echo '<p>';
 
    $val = rand(1,40);
    $calc->add($val);
