@@ -1,7 +1,7 @@
-# my first php project (p1-basic stuff)
+# my first php project (p1-basics)
 
 Apache Server = localhost
-<br>Project Folder = document_root/projects/p1
+<br>Project Folder = document_root/projects/p1-basics
 <br>Deployed to: <a href="https://p1-basic-stuff.herokuapp.com/">p1-basic-stuff.herokuapp.com</a>
 
 - The git "README.md" file (this) is directly read into in the site page's "description" <div..>
