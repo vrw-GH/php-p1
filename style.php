@@ -9,6 +9,11 @@ background-color: lightgrey;
 
 .div_title {
 color: black;
+background-color: lightgreen;
+}
+
+.div_home {
+padding: 20px;
 }
 
 .div_details {
@@ -51,8 +56,8 @@ color: lightyellow;
 
 .div_contents {
 display: inlineflex;
-width: 98%;
-padding: 1%;
+width: 99%;
+padding: 10px;
 align-items: center;
 justify-content: center;
 overflow: scroll;
