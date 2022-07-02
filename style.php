@@ -12,8 +12,8 @@ color: black;
 background-color: lightgreen;
 }
 
-.div_home {
-padding: 20px;
+.div_workarea {
+padding: 10px;
 }
 
 .div_details {
@@ -56,16 +56,18 @@ color: lightyellow;
 
 .div_contents {
 display: inlineflex;
-width: 99%;
+width: 98%;
+height: auto;
 padding: 10px;
 align-items: center;
 justify-content: center;
-overflow: scroll;
+<!-- overflow: scroll; -->
 }
 
-.div_contents, iframe {
+.div_workarea > iframe {
 background-color: silver;
-width: 98%;
+width: 99%;
+height: 60vh;
 }
 
 .div_footer {

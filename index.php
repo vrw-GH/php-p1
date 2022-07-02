@@ -11,6 +11,17 @@
 </head>
 
 <body>
+   <?php
+   // $randomcolor=dechex(rand(0, 10000000)); // also produces dark colors :(
+   $randomcolor = sprintf('#%06X', mt_rand(intval(0xFFFFFF / 1.005), 0xFFFFFF));
+   $server = $_SERVER['HTTP_HOST'];
+   $thisphp = $_SERVER['PHP_SELF'];
+   $root = 'document_root/' . substr($thisphp,1,strrpos($thisphp,'/'));
+   // $query = $_SERVER ['QUERY_STRING'];
+   $time = date('g:i A (e)');
+   // $time = exec('time /T');
+?>
+
 
    <!-- ----------------- TITLE ------------------- -->
    <div id="title" class="div_title">
