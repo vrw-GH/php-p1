@@ -1,6 +1,6 @@
 # my first php project (p1-basics)
 
-<br>Deployed to: <a href="https://p1-basic-stuff.herokuapp.com/">p1-basic-stuff.herokuapp.com</a>
+<br>Deployed to: <a href="https://php1-basic-stuff.herokuapp.com/">php1-basic-stuff.herokuapp.com</a>
 
 - The git "README.md" file (this) is directly read into in the site page's "description" <div..>
 - HTML tags are sanitized before being displayed in the site page. ie:
