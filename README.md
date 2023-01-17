@@ -1,6 +1,6 @@
-# my first php project (p1-basics)
+# My first PHP project (p1-basics)
 
-<br>Deployed to: <a href="https://php1-basic-stuff.herokuapp.com/">php1-basic-stuff.herokuapp.com</a>
+[![Screenshot](./assets/Screenshot.png)](https://php-p1.vercel.app)
 
 - The git "README.md" file (this) is directly read into in the site page's "description" <div..>
 - HTML tags are sanitized before being displayed in the site page. ie:
@@ -16,4 +16,10 @@
 - "Home" page refreshes every few seconds for the time display.
 - "Inc_folder" page displays the directory of "inc", and onclick will display sanitized contents of page as text.
 
-GitHub: <a href="https://github.com/vrw-GH/php-p1">vrw-gh.github.io/php-p1</a>
+<pre>
+Developer:   Victor Wright
+Client:      Self
+Date:        21 May 2022
+Deployed V1: <a href="https://php-p1.vercel.app">https://php-p1.vercel.app</a>
+GH Page:     <a href="https://vrw-gh.github.io/php-p1/">vrw-gh.github.io/php-p1</a>
+</pre>
