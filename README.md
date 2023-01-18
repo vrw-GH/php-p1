@@ -1,6 +1,6 @@
 # My first PHP project (p1-basics)
 
-[![Screenshot](./assets/Screenshot.png)](https://php-p1.vercel.app)
+[![Screenshot](./assets/Screenshot.png)](https://www.wrightsdesk.com/dev/p1-basics)
 
 - The git "README.md" file (this) is directly read into in the site page's "description" <div..>
 - HTML tags are sanitized before being displayed in the site page. ie:
@@ -20,6 +20,6 @@
 Developer:   Victor Wright
 Client:      Self
 Date:        21 May 2022
-Deployed V1: <a href="https://php-p1.vercel.app">https://php-p1.vercel.app</a>
+Deployed V1: <a href="https://www.wrightsdesk.com/dev/p1-basics">https://www.wrightsdesk.com/dev/p1-basics</a>
 GH Page:     <a href="https://vrw-gh.github.io/php-p1/">vrw-gh.github.io/php-p1</a>
 </pre>
