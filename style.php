@@ -31,13 +31,14 @@ padding-left: 2rem;
 display: inlineflex;
 overflow-y: hidden;
 background-color: white;
-height: 50px;
+height: 30vh;
+min-height: 50px;
 padding: 0px 10px 120px 10px;
 margin: 5px;
 }
-
 .div_descr:hover {
-height:20vh;
+height: max-content;
+max-height: 70vh;
 overflow: scroll;
 }
 
